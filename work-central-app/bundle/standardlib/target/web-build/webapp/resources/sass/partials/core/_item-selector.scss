@@ -1,0 +1,144 @@
+.rx-item-selector {
+  &__wrapper {
+    border-bottom: 1px solid $gray-concrete;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__column {
+    padding: 20px;
+  }
+
+  &__left-column {
+    flex-basis: 320px;
+    border-right: 1px solid $gray-concrete;
+  }
+
+  &__right-column {
+    flex-grow: 1;
+  }
+
+  &__action-buttons {
+    text-align: right;
+    padding: 20px;
+  }
+
+  &__available-list {
+    height: 550px;
+    padding: 0 10px;
+    border: 1px solid $gray-concrete;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__available-item {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  &__item-pill {
+    display: flex;
+  }
+
+  &__item-pill-icon {
+    padding-right: 8px;
+    margin: 0;
+  }
+
+  &__selected-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  &__selected-container {
+    margin-bottom: 10px;
+  }
+
+  &__selected-list {
+    height: 540px;
+    overflow: auto;
+  }
+
+  &__selected-item {
+    padding: 0 15px 0 12px;
+    border: 1px solid $gray-alto;
+    height: 34px;
+    width: 100%;
+    background-color: $gray-concrete;
+    border-radius: 2px;
+    display: flex;
+    color: $gray-mine-shaft;
+  }
+
+  &__selected-content {
+    overflow: hidden;
+    padding: 20px 20px 0;
+    margin-top: -1px;
+    border: 1px solid $gray-alto;
+  }
+
+  &__selected-item-header-left,
+  &__selected-item-header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__selected-item-header-left {
+    flex-grow: 1;
+  }
+
+  &__selected-item-header-icon {
+    margin-right: 15px;
+    cursor: move;
+  }
+
+  &__index-buttons {
+    display: flex;
+    font-size: 19px;
+
+    button {
+      background-color: inherit;
+    }
+  }
+
+  &__remove-button {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    font-size: 19px;
+  }
+
+  &__remove-button-text {
+    margin-left: 6px;
+    font-size: 12px;
+  }
+
+  &__arrow-pointer {
+    font-size: 22px;
+    margin-left: 24px;
+    cursor: pointer;
+  }
+
+  .dndPlaceholder {
+    background-color: $yellow__disabled;
+    min-height: 70px;
+    margin: 2px;
+    display: block;
+    position: relative;
+    border: none;
+  }
+
+  .dndDraggingSource {
+    display: none;
+  }
+
+  .dndDragover {
+    border-color: $yellow__disabled;
+  }
+}
+
+.rx-item-selector-dialog .modal-dialog {
+  width: 984px;
+}

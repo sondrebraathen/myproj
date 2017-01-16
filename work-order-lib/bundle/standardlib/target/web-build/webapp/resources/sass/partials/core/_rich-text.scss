@@ -1,0 +1,35 @@
+rx-rich-text-design {
+  .wrapper {
+    position: relative;
+    height: 100px;
+  }
+
+  .backdrop {
+    position: absolute;
+    // negative values (-7px) are here because of Firefox bug which allows
+    // dropping content into inner element if there is no overlap between boundaries
+    // of the outer and inner element
+    top: -7px;
+    right: -7px;
+    bottom: -7px;
+    left: -7px;
+    z-index: 1;
+  }
+
+  .cke-scrollable-area {
+    overflow: auto;
+    height: 100%;
+
+    > .editor {
+      -moz-user-select: text;
+      -webkit-user-select: auto;
+      -ms-user-select: text;
+    }
+  }
+}
+
+rx-rich-text {
+  > div {
+    word-wrap: break-word;
+  }
+}

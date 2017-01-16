@@ -1,0 +1,146 @@
+rx-runtime-view {
+  padding: 0;
+  display: block;
+  height: 100%;
+
+  > div {
+    height: 100%;
+  }
+
+  .rx-template-header {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .rx-template-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+    &.rx-template-row-layout {
+      flex-direction: row;
+
+      .rx-template-layout {
+        overflow-y: auto;
+      }
+    }
+
+    .rx-template-content {
+      flex: 1 1 auto;
+      overflow-y: auto;
+
+      > div {
+        > div[ng-repeat] {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+
+      > div.row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .rx-template-footer {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .rx-auto-fill {
+    flex: 1 1 auto;
+  }
+
+  .rx-no-margin .runtime-view-item-holder {
+    margin: 0 !important;
+  }
+
+  .rx-white-background {
+    background-color: #ffffff;
+  }
+}
+
+.rx-default-border {
+  border: 1px solid $gray-alto;
+}
+
+.rx-runtime-view-dialog.action-blade {
+  &__small {
+    .modal-dialog {
+      width: 450px;
+    }
+  }
+
+  &__medium {
+    .modal-dialog {
+      width: 650px;
+    }
+  }
+
+  &__large {
+    .modal-dialog {
+      width: 950px;
+    }
+  }
+}
+
+.rx-runtime-view-dialog {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .modal-body__content {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      padding: 0;
+      position: relative;
+
+      rx-runtime-view {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &.modal__small {
+    .modal-dialog {
+      width: 600px;
+
+      .modal-body__content {
+        height: 400px;
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  &.modal__medium {
+    .modal-dialog {
+      width: 800px;
+
+      .modal-body__content {
+        height: 600px;
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  &.modal__large {
+    .modal-dialog {
+      width: 1024px;
+
+      .modal-body__content {
+        height: 768px;
+        overflow-x: hidden;
+      }
+    }
+  }
+}

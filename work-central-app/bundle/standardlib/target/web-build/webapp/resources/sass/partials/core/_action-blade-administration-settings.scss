@@ -1,0 +1,53 @@
+.action-blade-panel {
+  .action-blade-header {
+    padding: 20px;
+    font-size: 26px;
+    background-color: $gray-concrete;
+  }
+
+  .action-blade-body {
+    overflow: hidden;
+
+    .action-blade-group-list {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      bottom: 76px;
+      left: 20px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  .action-blade__footer {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid $gray-alto;
+    line-height: 75px;
+
+    .action-blade__button-container {
+      display: inline-block;
+      float: right;
+      padding: 0 20px;
+    }
+  }
+}
+
+.d-action-blade {
+  &.custom-action-blade {
+    .action-blade-panel {
+      height: 100%;
+
+      form {
+        height: inherit;
+      }
+
+      .modal-body {
+        height: calc(100% - 156px);
+        overflow: auto;
+      }
+    }
+  }
+}

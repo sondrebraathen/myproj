@@ -1,0 +1,31 @@
+.rx-approval-flow-selector-dialog {
+  .modal-dialog {
+    width: 960px;
+  }
+
+  .rx-approval-flow-selector-dialog-action-buttons {
+    text-align: right;
+    padding-top: 15px;
+
+    .d-error {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+  .d-search-title {
+    padding-top: 10px;
+
+    .d-textfield__item {
+      font-weight: bold;
+    }
+  }
+
+  rx-record-grid-toolbar {
+    display: none;
+  }
+
+  .ui-grid-header{
+	border-top: 0;
+  }
+}

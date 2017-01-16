@@ -1,0 +1,18 @@
+.rx-confirmation-message {
+  .modal-dialog {
+    width: 350px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  textarea {
+    margin-top: 5px;
+  }
+
+  .rx-confirmation-message-buttons {
+    margin: 15px 0 0 0;
+    text-align: right;
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"file": "com.example.work-central-app.css",
+	"sources": [
+		"../../../../../src/main/webapp/resources/sass/com.example.work-central-app.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/_variables.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/components/_dpl-components-variables.scss",
+		"../../../../../src/main/webapp/resources/sass/_variables.scss",
+		"../../../../../src/main/webapp/resources/sass/partials/_base.scss",
+		"../../../../../src/main/webapp/resources/sass/partials/_viewport.scss",
+		"../../../../../src/main/webapp/resources/sass/partials/_app-header.scss"
+	],
+	"mappings": "AIAA,AAAA,IAAI,CACJ,AAAA,IAAI,AAAC,CACH,WAAW,CFkDC,WAAW,CAAE,gBAAgB,CAAE,eAAe,CAAE,SAAS,CAAE,OAAO,CAAE,UAAU,CEjD1F,MAAM,CAAE,IAAK,CACd,AAED,AAAe,IAAX,EAAG,AAAA,OAAC,AAAA,CAAS,CACf,MAAM,CAAE,IAAK,CACb,QAAQ,CAAE,QAAS,CACpB,AAED,AAAA,IAAI,AAAC,CACH,sBAAsB,CAAE,WAAY,CACpC,SAAS,CAAE,MAAO,CAClB,UAAU,CAAE,MAAO,CACpB,CAED,AAAA,AAAgB,OAAf,CAAD,OAAC,AAAA,CAAiB,CAChB,UAAU,CAAE,IAAK,CAkBlB,CAnBD,AAAA,AAGE,OAHD,CAAD,OAAC,AAAA,EAGC,EAAE,AAAC,CACD,UAAU,CAAE,CAAE,CACd,aAAa,CAAE,CAAE,CACjB,WAAW,CAAE,IAAK,CACnB,CAPH,AAAA,AASE,OATD,CAAD,OAAC,AAAA,EASC,EAAE,AAAC,CACD,KAAK,CFUI,IAAI,CETb,UAAU,CAAE,CAAE,CACf,CAZH,AAAA,AAcgB,OAdf,CAAD,OAAC,AAAA,EAcG,IAAI,AAAA,QAAQ,AAAA,sBAAsB,AAAC,CACnC,QAAQ,CAAE,QAAS,CACnB,MAAM,CAAE,IAAK,CACb,KAAK,CAAE,IAAK,CACb,AAGH,AAAA,YAAY,AAAC,CACX,MAAM,CAAE,IAAK,CACd,AAED,AAAA,CAAC,AACE,MAAM,AAAC,CACN,eAAe,CAAE,IAAK,CACvB,AAHH,AAAA,CAAC,AAKE,MAAM,AAAC,CACN,eAAe,CAAE,IAAK,CACvB,CCjDH,AAAA,AAAgB,OAAf,CAAD,OAAC,AAAA,CAAiB,CAChB,QAAQ,CAAE,QAAS,CACnB,GAAG,CAAE,IAAK,CACV,MAAM,CAAE,CAAE,CACV,KAAK,CAAE,IAAK,CACb,ACLD,AAAA,SAAS,CAOT,AAPA,cAOc,AAPJ,CACR,OAAO,CAAE,KAAM,CACf,KAAK,CAAE,IAAK,CACZ,MAAM,CAAE,IAAK,CACb,UAAU,CAAE,kEAAG,CAAiC,SAAS,CAC1D,AAED,AAAA,cAAc,AAAC,CAEb,UAAU,CAAE,uEAAG,CAAsC,SAAS,CAC/D",
+	"names": []
+}

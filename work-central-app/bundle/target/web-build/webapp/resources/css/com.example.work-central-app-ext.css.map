@@ -1,0 +1,29 @@
+{
+	"version": 3,
+	"file": "com.example.work-central-app-ext.css",
+	"sources": [
+		"../../../../../src/main/webapp/resources/sass/com.example.work-central-app-ext.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/_variables.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/components/_dpl-components-variables.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/_mixins.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/components/_dpl-components-mixins.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_border-radius.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_clearfix.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_gradients.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_image.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_opacity.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_reset-filter.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_vendor-prefixes.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_required-field.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_position.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_sr-only.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_preloader.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/components/_dpl-components-variables.scss",
+		"../../../../../standardlib/target/web-build/webapp/lib/bmc-dpl-2.9.0/src/mixins/_iconfont-default.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/mixins/_input-type-range.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/mixins/_icon-button.scss",
+		"../../../../../standardlib/target/web-build/webapp/resources/sass/partials/core/mixins/_transitions-disabled.scss"
+	],
+	"mappings": "",
+	"names": []
+}

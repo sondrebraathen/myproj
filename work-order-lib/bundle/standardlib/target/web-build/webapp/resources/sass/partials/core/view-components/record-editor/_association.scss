@@ -1,0 +1,68 @@
+rx-association {
+  rx-record-editor-component-renderer {
+    padding: 0;
+  }
+}
+
+.rx-association {
+  display: block;
+  margin-bottom: 20px;
+
+  &__label {
+    padding-bottom: 5px;
+    color: $rx-label-color;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  &__buttons-left {
+    flex-grow: 1;
+  }
+
+  &__button {
+    & + .rx-association__button {
+      margin-left: 5px;
+    }
+  }
+
+  &__empty-message {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray-alto;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__group-title {
+    font-size: 12px;
+    color: $gray-dusty;
+    margin: 0;
+  }
+
+  &__preview-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__preview-existing-head {
+    position: absolute;
+    right: 0;
+    top: -28px;
+  }
+
+  &__preview-pending-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__preview-count {
+    font-size: 12px;
+    color: $gray-dusty;
+  }
+}

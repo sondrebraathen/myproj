@@ -1,0 +1,357 @@
+@import "view-components/record-editor/association";
+@import "view-components/record-grid/record-grid";
+
+$rx-attachment-label-font-size: 0.7em !default;
+$rx-date-timepicker-item-margin: 0 0 5px 10px;
+
+rx-view-component-placeholder {
+  .well {
+    height: 100px;
+    text-align: center;
+  }
+}
+
+rx-record-editor {
+  display: block;
+  margin-top: 12px;
+
+  .rx-record-editor-read-state {
+    .d-textfield__item {
+      padding-bottom: 5px;
+    }
+  }
+
+  .rx-record-editor-edit {
+    position: absolute;
+    right: 2em;
+    top: 0.7em;
+    z-index: 150;
+  }
+
+  &.state-changing {
+    rx-record-editor-component-renderer {
+      max-height: 60px;
+      opacity: 0;
+    }
+  }
+}
+
+.rx-record-editor {
+  &__form {
+    position: relative;
+  }
+
+  &_columns-2 {
+    .rx-record-editor__form {
+      padding-top: 20px;
+    }
+
+    rx-record-editor-component-renderer {
+      width: 50%;
+      padding: 0 10px;
+    }
+  }
+
+  &__separator {
+    height: 1px;
+    width: 100%;
+    margin: 20px 6px 30px;
+    background: $gray-alto;
+  }
+
+  &:not(.rx-record-editor_no-border) {
+    .rx-record-editor__form {
+      border: 1px solid $gray-alto;
+      padding: 20px 20px 0 20px;
+    }
+  }
+}
+
+rx-record-editor-component-renderer {
+  width: 100%;
+  display: block;
+}
+
+.rx-record-editor__field-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.rx-record-editor__button-bar {
+  padding-bottom: 20px;
+}
+
+rx-record-editor-design {
+  display: block;
+  background: rgba($blue, 0.1);
+  min-height: 184px;
+
+  > div {
+    padding-bottom: 40px;
+  }
+
+  .info-text {
+    display: none;
+  }
+
+  .empty-form {
+    padding-bottom: 0;
+
+    div {
+      > ul {
+        height: 182px;
+      }
+    }
+
+    .control-bar {
+      display: none;
+    }
+
+    .info-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      text-align: center;
+      padding-top: 60px;
+      display: block;
+      overflow: hidden;
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  div.container-element {
+    > ul[dnd-list] {
+      border: none;
+    }
+
+    ul[dnd-list] > li {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .rx-view-designer-item {
+      padding: 0 8px;
+    }
+  }
+
+  .control-bar {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+  }
+
+  .d-textfield {
+    margin-bottom: 10px;
+
+    select {
+      width: 100%;
+    }
+  }
+
+  rx-select-group-field-design {
+    display: block;
+
+    .empty-form-text {
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+}
+
+rx-record-grid-design {
+  min-height: 184px;
+  display: block;
+
+  > .invisible {
+    visibility: hidden;
+  }
+
+  .info-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 60px;
+    display: block;
+
+    div {
+      > ul {
+        height: 182px;
+      }
+    }
+  }
+
+  .rx-view-designer-item-content rx-action-button-design {
+    background-color: transparent;
+  }
+}
+
+.rx-inspector-record-definition-fields-dialog {
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+    .d-button_primary {
+      margin: 0 15px;
+    }
+
+    .modal-title {
+      flex-grow: 1;
+    }
+  }
+
+  .record-definition-fields-content {
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid $gray-alto;
+    padding: 10px;
+  }
+
+  .record-definition-fields-checkbox {
+    margin-bottom: 3px;
+  }
+
+  .record-definition-fields-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+
+    .select-all {
+      white-space: nowrap;
+      margin-right: 25px;
+    }
+
+    .d-textfield {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  }
+}
+
+rx-inspector-record-definition-fields {
+  .field-action {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .field-item {
+    margin-bottom: 5px;
+    border: 1px solid $gray-alto;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: $gray-mine-shaft;
+    display: flex;
+    justify-content: space-between;
+    word-break: break-all;
+
+    .field-name {
+      font-weight: $font-weight__bold;
+    }
+
+    .field-type {
+      color: $gray-dusty;
+    }
+  }
+}
+
+rx-attachment-field,
+rx-attachment-field-design {
+  display: block;
+
+  .rx-attachments {
+    padding: 0;
+  }
+
+  .rx-attachment-input {
+    position: absolute;
+    left: -1000px;
+    top: -1000px
+  }
+
+  .rx-attachment-remove {
+    display: inline-block;
+    color: $gray-mine-shaft;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+    visibility: hidden;
+  }
+
+  .rx-attachment-item {
+    margin-left: 20px;
+    display: inline-block;
+  }
+
+  .rx-attachment-label {
+    color: $gray-mine-shaft;
+  }
+
+  .rx-attachment-remove:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .rx-attachment-item:hover .rx-attachment-remove {
+    visibility: visible;
+  }
+}
+
+rx-date-field,
+rx-date-field-design,
+rx-date-time-field,
+rx-date-time-field-design {
+  .input-group-btn button {
+    padding: 3px 6px;
+  }
+  .__required-field .dropdown-menu tbody span:after {
+    content: "";
+  }
+}
+
+rx-date-time-field-design {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .rx-datepicker-container {
+    margin: $rx-date-timepicker-item-margin;
+    width: 45%;
+  }
+  .rx-timepicker-container {
+    margin: $rx-date-timepicker-item-margin;
+  }
+}
+
+rx-time-field,
+rx-date-time-field {
+  .d-timepicker__label {
+    margin: 0;
+  }
+}
+
+rx-textarea-field {
+  white-space: pre-wrap;
+}
+
+rx-selection-field {
+  .ui-select-container {
+    span {
+      &:after {
+        content: ''
+      }
+    }
+  }
+}

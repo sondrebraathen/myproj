@@ -1,0 +1,125 @@
+.rx-admin-settings {
+  height: calc(100% - 15px);
+
+  rx-record-grid {
+    height: 550px;
+  }
+
+  .rx-blade .rx-blade-toggle {
+    border-bottom: none;
+  }
+
+  .save-setting {
+    margin-top: 10px;
+  }
+}
+
+.rx-admin-settings-data-rows {
+  overflow: auto;
+  width: 100%;
+}
+
+.rx-admin-settings-tree {
+  background: $white;
+}
+
+.rx-admin-settings-filter {
+  padding-bottom: 1em;
+}
+
+.rx-admin-settings-hidden {
+  display: none;
+}
+
+.rx-admin-settings {
+  .search {
+    font-size: 18px;
+  }
+}
+
+.rx-user-preference-save-setting {
+  margin-top: 10px;
+}
+
+.reset-setting {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.group-setting {
+  float: right;
+  top: -50px;
+  position: relative;
+}
+
+.blade-exapand {
+  position: relative;
+  width: calc(100% - 280px);
+  left: 280px;
+  margin-top: 15px;
+}
+
+.blade-collapse {
+  left: 0px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.admin-settings-attachments {
+  .admin-settings-attachment-input {
+    display: none;
+  }
+
+  .admin-settings-attachment-item {
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  .admin-settings-attachment-icon {
+    @include background-size(contain);
+
+    display: inline-block;
+    width: 28px;
+    margin-right: 5px;
+    background: {
+      color: transparent;
+      repeat: no-repeat;
+      position: center center;
+    };
+    vertical-align: middle;
+  }
+
+  .admin-settings-attachment-item:hover {
+    visibility: visible;
+  }
+}
+
+.rx-navigation {
+  .rx-blade .rx-blade-content {
+    height: 0px;
+  }
+}
+
+.admin-settings-nav-header {
+  width: 100%;
+}
+
+.service-controls .icon {
+  font-size: 1.5em;
+}
+
+rx-administration-settings {
+  .rx-blade {
+    .rx-blade-tabs {
+      display: block;
+    }
+
+    treecontrol {
+      li {
+        .tree-label {
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}

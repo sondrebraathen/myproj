@@ -1,0 +1,103 @@
+rx-button-bar-design {
+  display: block;
+
+  .align-left {
+    ul[dnd-list] {
+      justify-content: flex-start;
+    }
+  }
+
+  .align-center {
+    ul[dnd-list] {
+      justify-content: center;
+    }
+  }
+
+  .align-right {
+    ul[dnd-list] {
+      justify-content: flex-end;
+    }
+  }
+
+  ul[dnd-list] {
+    display: flex;
+    min-height: 25px !important;
+
+    li {
+      display: inline-block;
+      margin-bottom: 0;
+
+      & + li {
+        margin-left: 5px;
+      }
+
+      &.dndPlaceholder {
+        min-height: 30px !important;
+        width: 10px;
+        display: inline-block;
+        border: none;
+        margin: 5px;
+        vertical-align: bottom;
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+rx-action-button {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+rx-button-bar > div {
+
+  &.align-left > div > div {
+    justify-content: flex-start;
+
+    rx-action-button:not(:empty) {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+
+  &.align-center > div > div {
+    justify-content: center;
+
+    rx-action-button:not(:empty) {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  &.align-right > div > div {
+    justify-content: flex-end;
+
+    rx-action-button:not(:empty) {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  > div.row {
+    margin-left: 0;
+    margin-right: 0;
+
+    div.col-sm-12 {
+      padding: 0;
+    }
+  }
+
+  > div > div {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+}

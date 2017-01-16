@@ -1,0 +1,14 @@
+.rx-access-denied-message {
+  display: flex;
+  padding: 10px;
+
+  .rx-access-denied-message-icon {
+    width: 40px;
+  }
+
+  .rx-access-denied-message-text {
+    p {
+      max-width: 85%;
+    }
+  }
+}

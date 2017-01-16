@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <condition property="npm.root.module.isWindows">
+    <os family="windows"/>
+  </condition>
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
+  <echo>NPM INSTALL</echo>
+  <if>
+    <isset property="npm.root.module.dir"/>
+    <then>
+      <mkdir dir="${npm.root.module.dir}/Work Order/node_modules"/>
+      <if>
+        <isset property="npm.root.module.isWindows"/>
+        <then>
+          <echo message="Copying the node_modules from share folder."/>
+          <copy todir="C:\projects\work-order-lib\bundle/node_modules" failonerror="false">
+            <fileset dir="${npm.root.module.dir}/Work Order/node_modules"/>
+          </copy>
+        </then>
+        <else>
+          <echo message="Creating the Symbolic Link to the shared node_modules folder."/>
+          <symlink resource="${npm.root.module.dir}/Work Order/node_modules" link="C:\projects\work-order-lib\bundle/node_modules" overwrite="true"/>
+        </else>
+      </if>
+    </then>
+  </if>
+  <exec failonerror="true" dir="C:\projects\work-order-lib\bundle" executable="cmd" osfamily="windows">
+    <arg line="/c npm config set color false"/>
+  </exec>
+  <exec failonerror="true" dir="C:\projects\work-order-lib\bundle" executable="npm" osfamily="unix">
+    <arg line="config set color false"/>
+  </exec>
+  <exec failonerror="true" dir="C:\projects\work-order-lib\bundle" executable="cmd" osfamily="windows">
+    <arg line="/c npm install"/>
+  </exec>
+  <exec failonerror="true" dir="C:\projects\work-order-lib\bundle" executable="npm" osfamily="unix">
+    <arg line="install"/>
+  </exec>
+  <if>
+    <and>
+      <isset property="npm.root.module.isWindows"/>
+      <isset property="npm.root.module.dir"/>
+    </and>
+    <then>
+      <echo message="Copying the node_modules to the share folder"/>
+      <mkdir dir="${npm.root.module.dir}/Work Order/node_modules"/>
+      <copy todir="${npm.root.module.dir}/Work Order/node_modules" failonerror="false">
+        <fileset dir="C:\projects\work-order-lib\bundle/node_modules"/>
+      </copy>
+    </then>
+  </if>
+  <echo>Executing GRUNT</echo>
+  <exec output="grunt.status" resultproperty="cmdresult" dir="C:\projects\work-order-lib\bundle" executable="cmd" osfamily="windows">
+    <arg line="/c grunt release --no-color"/>
+  </exec>
+  <exec output="grunt.status" resultproperty="cmdresult" dir="C:\projects\work-order-lib\bundle" executable="grunt" osfamily="unix">
+    <arg line="release --no-color"/>
+  </exec>
+  <loadfile property="grunt.status" srcFile="C:\projects\work-order-lib\bundle\grunt.status"/>
+  <echo>${grunt.status}</echo>
+  <delete file="C:\projects\work-order-lib\bundle\grunt.status" quiet="true"/>
+  <condition property="cmdsuccess">
+    <equals arg2="0" arg1="${cmdresult}"/>
+  </condition>
+  <if>
+    <and>
+      <not>
+        <isset property="npm.root.module.isWindows"/>
+      </not>
+      <isset property="npm.root.module.dir"/>
+    </and>
+    <then>
+      <echo message="Removing the Symbolic Link to the shared node_modules folder."/>
+      <symlink link="C:\projects\work-order-lib\bundle/node_modules" action="delete" failonerror="false"/>
+    </then>
+  </if>
+  <fail unless="cmdsuccess"/>
+</target>
+</project>

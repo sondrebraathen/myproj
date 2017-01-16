@@ -1,0 +1,130 @@
+rx-search-filter {
+  display: flex;
+  align-items: center;
+
+  .rx-search-filter__trigger {
+    margin-right: 5px;
+  }
+
+  .search-filter-dropdown {
+    width: 240px;
+    padding: 0;
+    margin: 0;
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  .search-filter-section {
+    position: relative;
+    margin: 0;
+
+    .d-button {
+      font-size: 12px;
+      padding: 4px;
+      height: auto;
+    }
+  }
+
+  .search-filter__option-item_search {
+    border: none;
+    margin: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dropdown-item_date-ranges,
+  .dropdown-item_range {
+    padding: 5px 10px;
+
+    .uib-datepicker-popup {
+      left: 0 !important;
+      top: 0 !important;
+
+      button {
+        font-size: 11px;
+        padding: 3px 5px;
+      }
+    }
+  }
+
+  .dropdown-item_range .d-button {
+    margin-top: 5px;
+  }
+
+  .dropdown-item_date-range {
+    .d-timepicker__unit {
+      label {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .ui-bootstrap__timepicker {
+    .d-error {
+      display: none;
+    }
+
+    .d-timepicker__label {
+      display: inline-block;
+    }
+  }
+
+  .panel-group {
+    margin-bottom: 0;
+  }
+}
+
+.d-accordion_filter {
+  border-radius: 0;
+
+  .d-accordion__title {
+    line-height: 30px;
+    padding-left: 10px;
+    background: transparent;
+
+    &:after {
+      line-height: 30px;
+      right: 10px;
+    }
+  }
+
+  .d-textfield:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.rx-search-filter-heading {
+  padding: 3px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $gray-dusty;
+  background-color: $white__hover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rx-search-filter-heading__apply {
+  height: 18px;
+  padding: 0 5px;
+}
+
+.rx-search-filter-accordion {
+  .panel-group {
+    margin-bottom: 0;
+  }
+}
+
+.rx-search-filter-option {
+  padding: 7px 10px;
+  line-height: 1.3;
+
+  &:before {
+    margin-right: 5px;
+  }
+
+  &.rx-search-filter-option_checked {
+    background-color: rgba($teal, .1);
+  }
+}
